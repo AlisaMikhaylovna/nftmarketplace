@@ -1,0 +1,18 @@
+.carousel-container {
+    width: 80%; /* 设置轮播图宽度 */
+    margin: auto; /* 居中 */
+}
+
+.carousel-slide img {
+    width: 100%; /* 图片自适应宽度 */
+    border-radius: 8px; /* 圆角 */
+}
+
+.slick-dots {
+    bottom: 10px; /* 指示点位置 */
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 1; /* 确保箭头在上方 */
+}

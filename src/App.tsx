@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
 import { TopButton } from "./components/TopButton";
+import { Carousel } from "./components/Carousel";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           <TopButton label="Photography" isActive={activeButton === "Photography"} setActive={setActiveButton} />
           <TopButton label="Music" isActive={activeButton === "Music"} setActive={setActiveButton} />
         </div>
+        <Carousel />
       </div>
     </div>
   );
