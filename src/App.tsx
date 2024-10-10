@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
-import { Button } from "antd";
+import { TopButton } from "./components/TopButton";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeButton, setActiveButton] = useState<string>("All");
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
@@ -21,17 +22,13 @@ function App() {
     <div>
       <div className="topbar">
         <NavBar isScrolled={isScrolled} />
-        <div>
-          <ul>
-            <li><Button>All</Button></li>
-          </ul>
+        <div className="top-button-container">
+          <TopButton label="All" isActive={activeButton === "All"} setActive={setActiveButton} />
+          <TopButton label="Art" isActive={activeButton === "Art"} setActive={setActiveButton} />
+          <TopButton label="Gaming" isActive={activeButton === "Gaming"} setActive={setActiveButton} />
+          <TopButton label="Photography" isActive={activeButton === "Photography"} setActive={setActiveButton} />
+          <TopButton label="Music" isActive={activeButton === "Music"} setActive={setActiveButton} />
         </div>
-
-      </div>
-      <div style={{ height: '2000px', padding: '20px' }}>
-        <h1>欢迎来到首页</h1>
-        <p>这里是一些内容...</p>
-        {/* 更多内容 */}
       </div>
     </div>
   );

@@ -1,0 +1,20 @@
+.button {
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 20px;
+}
+
+.button.active {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(248, 247, 243, 0.2);
+}
