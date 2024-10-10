@@ -3,7 +3,7 @@ import { UserButton } from "../UserButton";
 import "./index.css";
 
 interface NavBarProps {
-    isScrolled?: boolean
+    isScrolled?: boolean;
 }
 
 export const NavBar = ({ isScrolled }: NavBarProps) => {
@@ -18,7 +18,7 @@ export const NavBar = ({ isScrolled }: NavBarProps) => {
             </div>
             <div className="search-container">
                 <img src="/search.png" className="search-logo" alt="Search" />
-                <span className="search">Search</span>
+                <span className="search-text">Search</span>
             </div>
             <Login />
             <UserButton />

@@ -1,36 +1,105 @@
-import React, { useState } from 'react';
-import './index.css'; // 自定义样式
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./index.css"; // 引入自定义样式
 
-export const Carousel: React.FC = () => {
+// 定义 ArrowProps 类型
+interface ArrowProps {
+    onClick?: () => void;
+}
+
+// 自定义箭头组件
+export const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
+    <div className="custom-arrow prev-arrow" onClick={onClick}>
+        <img src="/leftarrow.png" alt="Previous" />
+    </div>
+);
+
+export const NextArrow: React.FC<ArrowProps> = ({ onClick }) => (
+    <div className="custom-arrow next-arrow" onClick={onClick}>
+        <img src="/rightarrow.png" alt="Next" />
+    </div>
+);
+
+// 定义 CarouselRef 接口
+export interface CarouselRef {
+    slickPrev: () => void;
+    slickNext: () => void;
+}
+
+// 使用 forwardRef 让 Carousel 可以被父组件控制
+export const Carousel = forwardRef<CarouselRef>((_, ref) => {
+    const sliderRef = useRef<Slider>(null);
+
+    // 使用 useImperativeHandle 来暴露 slick 的方法给父组件
+    useImperativeHandle(ref, () => ({
+        slickPrev: () => sliderRef.current?.slickPrev(),
+        slickNext: () => sliderRef.current?.slickNext(),
+    }));
+
+    // 图片列表
     const images = [
         '/usaji.png',
-        '/search.png',
         '/usaji.png',
         '/usaji.png',
         '/usaji.png',
+        '/usaji.png',
+        '/usaji.png',
+        '/usaji.png',
+        '/usaji.png',
+        '/usaji.png',
+        '/usaji.png'
     ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    // Slick 的设置
+    const settings = {
+        dots: false, // 不显示导航点
+        infinite: true, // 无限循环
+        speed: 500, // 切换速度
+        slidesToShow: 4, // 一次显示4张图片
+        slidesToScroll: 1, // 每次滚动1张图片
+        autoplay: true, // 不自动轮播
+        arrows: false, // 隐藏默认箭头
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
-        <div className="carousel-container">
-            <div className="arrow left" onClick={prevSlide}>
-                <img src="/leftarrow.png" alt="Previous" />
-            </div>
-            <div className="carousel-slide">
-                <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-            </div>
-            <div className="arrow right" onClick={nextSlide}>
-                <img src="/rightarrow.png" alt="Next" />
-            </div>
+        <div className="carousel-wrapper">
+            <Slider ref={sliderRef} {...settings}>
+                {images.map((image, index) => (
+                    <div key={index} className="image-container">
+                        <img
+                            src={image}
+                            alt={`Slide ${index}`}
+                            className="carousel-image"
+                        />
+                    </div>
+                ))}
+            </Slider>
         </div>
+
     );
-};
+});

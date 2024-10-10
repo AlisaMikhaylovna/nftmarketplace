@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
 import { TopButton } from "./components/TopButton";
-import { Carousel } from "./components/Carousel";
+import { Carousel, PrevArrow, NextArrow, CarouselRef } from "./components/Carousel"; // 导入 CarouselRef
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeButton, setActiveButton] = useState<string>("All");
+
+  // 使用 CarouselRef 类型
+  const carouselRef = useRef<CarouselRef>(null);
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
@@ -31,7 +34,9 @@ function App() {
           <TopButton label="Music" isActive={activeButton === "Music"} setActive={setActiveButton} />
         </div>
         <div className="top-carousel">
-          <Carousel />
+          <PrevArrow onClick={() => carouselRef.current?.slickPrev()} />
+          <Carousel ref={carouselRef} /> {/* 将 ref 传递给 Carousel */}
+          <NextArrow onClick={() => carouselRef.current?.slickNext()} />
         </div>
       </div>
     </div>

@@ -16,5 +16,4 @@
 
 .button.active {
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(248, 247, 243, 0.2);
 }
