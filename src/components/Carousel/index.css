@@ -1,18 +1,59 @@
 .carousel-container {
-    width: 80%; /* 设置轮播图宽度 */
-    margin: auto; /* 居中 */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* 增加左右内边距，为箭头留出空间 */
+}
+
+.carousel-slide {
+    margin-left: 10px;
+    margin-right: 10px;
+    /* 减小侧边距，增加箭头空间 */
+    position: relative;
+    z-index: 1;
+    /* 确保图片在箭头下方 */
+    overflow: hidden;
 }
 
 .carousel-slide img {
-    width: 100%; /* 图片自适应宽度 */
-    border-radius: 8px; /* 圆角 */
+    width: 347px;
+    height: 347px;
+    border-radius: 8px;
+    margin: 0 20px;
+    overflow: hidden;
 }
 
-.slick-dots {
-    bottom: 10px; /* 指示点位置 */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    /* 确保箭头在图片上方 */
 }
 
-.slick-prev,
-.slick-next {
-    z-index: 1; /* 确保箭头在上方 */
+.next {
+    right: 0px;
+    /* 调整右箭头位置 */
+}
+
+.prev {
+    left: 0px;
+    /* 调整左箭头位置 */
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1960px) {
+    .carousel-slide {
+        display: none;
+        /* Hide extra slides if space is insufficient */
+    }
 }

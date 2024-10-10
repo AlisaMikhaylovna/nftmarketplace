@@ -30,7 +30,9 @@ function App() {
           <TopButton label="Photography" isActive={activeButton === "Photography"} setActive={setActiveButton} />
           <TopButton label="Music" isActive={activeButton === "Music"} setActive={setActiveButton} />
         </div>
-        <Carousel />
+        <div className="top-carousel">
+          <Carousel />
+        </div>
       </div>
     </div>
   );

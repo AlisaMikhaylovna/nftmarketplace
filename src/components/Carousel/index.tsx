@@ -9,11 +9,15 @@ interface ArrowProps {
 }
 
 const NextArrow: React.FC<ArrowProps> = ({ onClick }) => (
-    <div className="arrow next" onClick={onClick}>▶</div>
+    <div className="arrow next" onClick={onClick}>
+        <img src="/rightarrow.png" />
+    </div>
 );
 
 const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
-    <div className="arrow prev" onClick={onClick}>◀</div>
+    <div className="arrow prev" onClick={onClick}>
+        <img src='leftarrow.png' />
+    </div>
 );
 
 export const Carousel: React.FC = () => {
@@ -32,7 +36,7 @@ export const Carousel: React.FC = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // 显示前 4 张
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
