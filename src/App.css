@@ -22,6 +22,31 @@
 
 .top-carousel {
   display: flex;
-  justify-content: center; /* 确保轮播图居中 */
-  margin-top: 15px; /* 调整间距，避免与按钮重叠 */
+  /* 使用flex布局来保持箭头和轮播图的水平排列 */
+  justify-content: space-between;
+  /* 箭头和轮播图保持均匀间距 */
+  align-items: center;
+  /* 垂直方向居中 */
+  width: 100%;
+  /* 占满父容器宽度 */
+  margin-top: 20px;
+}
+
+
+.custom-arrow {
+  cursor: pointer;
+  /* 鼠标悬停时显示指针 */
+  /* 保证箭头显示在轮播图上方 */
+}
+
+/* 调整左箭头位置 */
+.prev-arrow {
+  margin-left: 10px;
+  /* 确保左箭头与轮播图保持适当间距 */
+}
+
+/* 调整右箭头位置 */
+.next-arrow {
+  margin-right: 10px;
+  /* 确保右箭头与轮播图保持适当间距 */
 }
