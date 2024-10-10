@@ -1,26 +1,20 @@
 .carousel-container {
     position: relative;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     overflow: hidden;
-    /* 增加左右内边距，为箭头留出空间 */
 }
 
 .carousel-slide {
-    margin-left: 10px;
-    margin-right: 10px;
-    /* 减小侧边距，增加箭头空间 */
-    position: relative;
-    z-index: 1;
-    /* 确保图片在箭头下方 */
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-slide img {
-    width: 347px;
-    height: 347px;
-    border-radius: 8px;
-    margin: 0 20px;
-    overflow: hidden;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
 }
 
 .arrow {
@@ -28,32 +22,13 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 2;
-    /* 确保箭头在图片上方 */
+    z-index: 1;
 }
 
-.next {
-    right: 0px;
-    /* 调整右箭头位置 */
+.left {
+    left: 10px;
 }
 
-.prev {
-    left: 0px;
-    /* 调整左箭头位置 */
-}
-
-.slick-list {
-    overflow: hidden;
-}
-
-.slick-track {
-    display: flex;
-    gap: 20px;
-}
-
-@media (max-width: 1960px) {
-    .carousel-slide {
-        display: none;
-        /* Hide extra slides if space is insufficient */
-    }
+.right {
+    right: 10px;
 }
