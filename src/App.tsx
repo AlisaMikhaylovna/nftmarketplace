@@ -3,6 +3,7 @@ import { NavBar } from "./components/NavBar";
 import "./App.css";
 import { TopButton } from "./components/TopButton";
 import { Carousel, PrevArrow, NextArrow, CarouselRef } from "./components/Carousel"; // 导入 CarouselRef
+import { Category } from "./components/Category";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,6 +39,9 @@ function App() {
           <Carousel ref={carouselRef} /> {/* 将 ref 传递给 Carousel */}
           <NextArrow onClick={() => carouselRef.current?.slickNext()} />
         </div>
+      </div>
+      <div className="category">
+        <Category title={"Trending in Art"} />
       </div>
     </div>
   );

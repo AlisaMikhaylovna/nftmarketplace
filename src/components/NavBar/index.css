@@ -1,6 +1,8 @@
 .top {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     height: 108px;
     background-color: #1E2026;
     z-index: 2;
@@ -8,6 +10,8 @@
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.3s;
+    width: 100%;
+    /* 添加左右内边距 */
 }
 
 .top.transparent {
@@ -46,13 +50,17 @@
 .search-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;  /* Align items to the start */
+    justify-content: flex-start;
+    /* Align items to the start */
     width: 460px;
     height: 48px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     border: 1px solid rgba(248, 247, 243, 0.2);
-    margin: 0 20px; /* Center the search box with margin */
+    margin: 0 20px;
+    /* Center the search box with margin */
+    margin-bottom: 16px;
+    /* 留出底部距离 */
 }
 
 .search-logo {
@@ -65,22 +73,41 @@
     font-weight: light;
     color: white;
     cursor: default;
-    margin-left: 10px; /* Space between icon and text */
+    margin-left: 10px;
+    /* Space between icon and text */
     opacity: 0.7;
 }
 
-/* Media query to hide search text on small screens */
+/* Media query for responsive design */
 @media (max-width: 768px) {
-    .search-container {
-        width: 48px; /* Make search box smaller */
-        padding: 0; /* Remove padding */
-    }
-    
-    .search-text {
-        display: none; /* Hide search text */
+    .top {
+        flex-direction: column;
+        /* 垂直排列 */
+        height: auto;
+        /* 高度自适应 */
+        padding: 10px 20px;
+        /* 添加上下内边距 */
     }
 
+    .nav {
+        margin-bottom: 10px;
+        /* 导航与搜索框之间的间距 */
+    }
+
+    .search-container {
+        width: 100%;
+        /* 搜索框宽度为100% */
+        height: 40px;
+        /* 较小的高度 */
+        margin: 0;
+        /* 清除外边距 */
+        margin-top: 10px;
+        /* 为搜索框添加顶部间距 */
+    }
+
+
     .search-logo {
-        margin-left: 0; /* Adjust logo margin for smaller size */
+        margin-left: 0;
+        /* 调整logo的margin */
     }
 }

@@ -1,5 +1,5 @@
 .topbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -17,7 +17,7 @@
   align-items: center;
   gap: 20px;
   padding-left: 40px;
-  margin-top: 10px;
+  margin-top: 118px;
 }
 
 .top-carousel {
@@ -49,4 +49,8 @@
 .next-arrow {
   margin-right: 10px;
   /* 确保右箭头与轮播图保持适当间距 */
+}
+
+.category {
+  margin-top: 700px;
 }
