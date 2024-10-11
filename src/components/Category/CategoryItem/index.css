@@ -1,10 +1,11 @@
 .category-item {
     width: 349px;
     height: 349px;
-    position: relative;
     border-radius: 8px;
     /* 添加圆角 */
     overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
     /* 防止内容溢出 */
 }
 
@@ -35,7 +36,7 @@
     /* 保持左侧内边距 */
     display: flex;
     /* 使用flex布局 */
-    
+
     /* 左右分布 */
 }
 

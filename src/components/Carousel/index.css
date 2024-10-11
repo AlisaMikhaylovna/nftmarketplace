@@ -19,7 +19,7 @@
 .carousel-image {
     width: 100%;
     /* 图片宽度 */
-    height: 100%;
+    height: auto;
     /* 图片高度 */
     border-radius: 10px;
     /* 圆角 */

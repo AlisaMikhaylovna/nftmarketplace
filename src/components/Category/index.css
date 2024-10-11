@@ -1,0 +1,15 @@
+.category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 设置容器高度 */
+}
+
+.title {
+    font-weight: bold;
+    font-size: 22px;
+    color: #1F1F1F;
+    display: block; /* 使标题占用整个宽度 */
+    margin-bottom: 20px; /* 添加标题与内容之间的间距 */
+}

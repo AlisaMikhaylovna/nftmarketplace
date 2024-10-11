@@ -1,4 +1,5 @@
 import { CategoryItem } from "./CategoryItem";
+import "./index.css";
 
 interface CategoryProps {
     title: string;
@@ -7,7 +8,7 @@ interface CategoryProps {
 export const Category = ({ title }: CategoryProps) => {
     return (
         <div>
-            <span>{title}</span>
+            <span className="title">{title}</span>
             <div className="category-list">
                 {Array.from({ length: 5 }, (_, index) => (
                     <CategoryItem key={index} />
