@@ -58,4 +58,5 @@
   height: 300px;
   background-color: #181A1E;
   width: 100%;
+  z-index: 1;
 }

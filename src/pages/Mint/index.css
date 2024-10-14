@@ -1,0 +1,49 @@
+.mint-container {
+    margin-top: 127px;
+    cursor: default;
+}
+
+.mint-top {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: flex-start;
+    margin-bottom: 36px;
+}
+
+.mint-back {
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.mint-title {
+    font-weight: bold;
+    font-size: 28px;
+    color: #1A1A1A;
+    margin-bottom: 24px;
+}
+
+.mint-description {
+    font-weight: 400;
+    font-size: 18px;
+    color: #1A1A1A;
+}
+
+.mint-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.mint-left {
+    height: 600px;
+    width: 600px;
+    border-radius: 8px;
+    border: 1px dashed #E6E6E6;
+    margin-right: 50px;
+}
+
+.mint-right {
+    width: 700px;
+    border-radius: 8px;
+    border: 1px solid #E6E6E6;
+}

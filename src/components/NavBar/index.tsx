@@ -14,7 +14,7 @@ export const NavBar = ({ isScrolled }: NavBarProps) => {
                 <div className="title">TuringNFT</div>
                 {/* <a href="">Drops</a>
                 <a href="">Stats</a> */}
-                <a href="">Create</a>
+                <a href="/create">Create</a>
             </div>
             <div className="search-container">
                 <img src="/search.png" className="search-logo" alt="Search" />
