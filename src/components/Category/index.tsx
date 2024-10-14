@@ -7,8 +7,8 @@ interface CategoryProps {
 
 export const Category = ({ title }: CategoryProps) => {
     return (
-        <div>
-            <span className="title">{title}</span>
+        <div className="category-container">
+            <span className="catogory-title ">{title}</span>
             <div className="category-list">
                 {Array.from({ length: 5 }, (_, index) => (
                     <CategoryItem key={index} />

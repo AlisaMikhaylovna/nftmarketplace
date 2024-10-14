@@ -9,7 +9,6 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeButton, setActiveButton] = useState<string>("All");
 
-  // 使用 CarouselRef 类型
   const carouselRef = useRef<CarouselRef>(null);
 
   const handleScroll = () => {
@@ -36,12 +35,23 @@ function App() {
         </div>
         <div className="top-carousel">
           <PrevArrow onClick={() => carouselRef.current?.slickPrev()} />
-          <Carousel ref={carouselRef} /> {/* 将 ref 传递给 Carousel */}
+          <Carousel ref={carouselRef} />
           <NextArrow onClick={() => carouselRef.current?.slickNext()} />
         </div>
       </div>
       <div className="category">
         <Category title={"Trending in Art"} />
+        <Category title={"Trending in Gaming"} />
+        <Category title={"Trending in Photography"} />
+        <Category title={"Trending in Music"} />
+      </div>
+      <div className="footer">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
       </div>
     </div>
   );

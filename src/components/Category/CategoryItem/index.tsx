@@ -4,7 +4,7 @@ export const CategoryItem = () => {
     return (
         <div className="category-item">
             <img src="/usaji.png" alt="Usaji" />
-            <span className="title">Chiikawa</span>
+            <span className="smalltitle">Chiikawa</span>
             <div className="info">
                 <div className='info-left'>
                     <span className='subtitle'>Floor</span>

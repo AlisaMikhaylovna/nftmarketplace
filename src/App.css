@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   z-index: 1;
-  height: 480px;
+  height: 580px;
   padding-top: 10px;
 }
 
@@ -22,36 +22,40 @@
 
 .top-carousel {
   display: flex;
-  /* 使用flex布局来保持箭头和轮播图的水平排列 */
   justify-content: space-between;
-  /* 箭头和轮播图保持均匀间距 */
   align-items: center;
-  /* 垂直方向居中 */
   width: 100%;
-  /* 占满父容器宽度 */
   margin-top: 20px;
 }
 
 
 .custom-arrow {
   cursor: pointer;
-  /* 鼠标悬停时显示指针 */
-  /* 保证箭头显示在轮播图上方 */
 }
 
-/* 调整左箭头位置 */
 .prev-arrow {
   margin-left: 10px;
-  /* 确保左箭头与轮播图保持适当间距 */
 }
 
-/* 调整右箭头位置 */
+
 .next-arrow {
   margin-right: 10px;
-  /* 确保右箭头与轮播图保持适当间距 */
 }
 
 .category {
   margin-top: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background-color: #181A1E;
   width: 100%;
 }

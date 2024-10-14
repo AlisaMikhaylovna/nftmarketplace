@@ -11,9 +11,9 @@ export const NavBar = ({ isScrolled }: NavBarProps) => {
         <div className={`top ${isScrolled ? '' : 'transparent'}`}>
             <div className="nav">
                 <img className="logo" src="/NFTlogo.png" alt="Logo" />
-                <span className="title">TuringNFT</span>
-                <a href="">Drops</a>
-                <a href="">Stats</a>
+                <div className="title">TuringNFT</div>
+                {/* <a href="">Drops</a>
+                <a href="">Stats</a> */}
                 <a href="">Create</a>
             </div>
             <div className="search-container">

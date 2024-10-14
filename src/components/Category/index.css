@@ -1,15 +1,24 @@
+.category-container {
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-bottom: 60px;
+}
+
+
 .category-list {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    height: 100vh; /* 设置容器高度 */
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.title {
+
+.catogory-title {
+    margin: 0 10px;
     font-weight: bold;
     font-size: 22px;
     color: #1F1F1F;
-    display: block; /* 使标题占用整个宽度 */
-    margin-bottom: 20px; /* 添加标题与内容之间的间距 */
+    display: block;
+    border: none;
+    margin-bottom: 30px;
 }

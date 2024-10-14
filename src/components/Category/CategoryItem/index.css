@@ -2,11 +2,11 @@
     width: 349px;
     height: 349px;
     border-radius: 8px;
-    /* 添加圆角 */
     overflow: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* 防止内容溢出 */
+    margin: 0 10px;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .category-item img {
@@ -14,39 +14,29 @@
     height: 244px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
-    /* 圆角只应用于顶部 */
 }
 
-.category-item .title {
+.smalltitle {
     text-align: center;
     font-weight: bold;
-    margin-top: 19px;
-    margin-left: 16px;
-    margin-bottom: 15px;
-    /* 仅设置上下间距，左右间距为0 */
-    padding: 0;
-    /* 清除内边距 */
-    border: none;
+    padding-top: 19px;
+    padding-left: 16px;
+    padding-bottom: 15px;
     font-size: 16px;
-    /* 确保没有边框 */
+    color: #1F1F1F;
 }
 
 .category-item .info {
     margin-left: 16px;
-    /* 保持左侧内边距 */
     display: flex;
-    /* 使用flex布局 */
-
-    /* 左右分布 */
+    margin-top: 10px;
 }
 
 .category-item .info-left,
 .category-item .info-right {
     display: flex;
     flex-direction: column;
-    /* 垂直排列 */
     align-items: flex-start;
-    /* 左对齐 */
 }
 
 .category-item .info-right {
@@ -58,7 +48,6 @@
     font-size: 14px;
     opacity: 0.6;
     text-align: left;
-    /* 确保文本左对齐 */
 }
 
 .category-item .price {
@@ -66,5 +55,4 @@
     font-size: 14px;
     color: #1F1F1F;
     text-align: left;
-    /* 确保文本左对齐 */
 }

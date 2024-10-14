@@ -1,50 +1,40 @@
 .carousel-wrapper {
 
     justify-content: center;
-    /* 居中 */
     align-items: center;
-    /* 垂直居中 */
-    position: relative;
-    /* 允许绝对定位的子元素 */
     width: calc(100% - 80px);
-    /* 设置宽度，留出箭头的空间 */
     margin: 0;
-    /* 去除额外的外边距 */
     overflow: hidden;
-    /* 确保不会显示部分图片 */
 }
 
 
-/* 图片样式 */
 .carousel-image {
     width: 100%;
-    /* 图片宽度 */
     height: auto;
-    /* 图片高度 */
     border-radius: 10px;
-    /* 圆角 */
+    object-fit: cover;
 }
 
 
 .slick-slide {
     margin: 0 15px;
-    /* 确保每个滑块之间有适当间距 */
 }
 
 
-/* 去掉最后一张和第一张图片旁的多余空白 */
 .slick-list {
     margin: 0 5px;
-    /* 确保轮播图与箭头之间有适当的空隙 */
     padding: 0;
     overflow: hidden;
 }
 
-/* 保证 .slick-track 中的内容居中对齐 */
 .slick-track {
     display: flex;
     justify-content: center;
-    /* 水平居中 */
     align-items: center;
-    /* 垂直居中 */
+}
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: auto;
+    }
 }
