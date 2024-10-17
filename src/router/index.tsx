@@ -33,17 +33,17 @@ const router = createBrowserRouter([
                 element: <Profile />,
             },
             {
-                path: "nifitication", // 移除前面的 /
+                path: "nifitication",
                 element: <Nifitication />,
             },
             {
-                path: "developer", // 移除前面的 /
+                path: "developer",
                 element: <Developer />,
             },
         ],
     },
     {
-        path: "/account/:username?", // username 可选
+        path: "/account/:username?",
         element: <Account />,
         children: [
             {
@@ -51,11 +51,11 @@ const router = createBrowserRouter([
                 element: <Collected />,
             },
             {
-                path: "created", // 相对路径，不需要前缀
+                path: "created",
                 element: <Created />,
             },
             {
-                path: "activity", // 相对路径，不需要前缀
+                path: "activity",
                 element: <Activity />,
             },
         ],

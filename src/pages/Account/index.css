@@ -1,0 +1,80 @@
+.account-container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    cursor: default;
+    margin-left: 40px;
+}
+
+.account-name {
+    font-weight: bold;
+    font-size: 28px;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.account-address {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A1A1A;
+    margin-right: 20px;
+}
+
+.account-time {
+    font-weight: 400;
+    font-size: 16px;
+    color: #545454;
+}
+
+.account-bar {
+    display: flex;
+    margin-top: 37px;
+    margin-bottom: 23px;
+}
+
+.account-item {
+    width: 135px;
+    height: 48px;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.account-link.active {
+    background: #F0F0F0;
+    border-radius: 8px;
+    border: 1px solid rgba(248, 247, 243, 0.2);
+}
+
+.account-search {
+    width: 631px;
+    height: 48px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+.account-number {
+    margin-left: 2px;
+}
+
+.divider {
+    width: 100vw;
+    height: 1px;
+    background: #E6E6E6;
+}
