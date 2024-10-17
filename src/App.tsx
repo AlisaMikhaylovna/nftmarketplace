@@ -30,6 +30,7 @@ function App() {
           <TopButton label="All" isActive={activeButton === "All"} setActive={setActiveButton} />
           <TopButton label="Art" isActive={activeButton === "Art"} setActive={setActiveButton} />
           <TopButton label="Gaming" isActive={activeButton === "Gaming"} setActive={setActiveButton} />
+          <TopButton label="PFPs" isActive={activeButton === "PFPs"} setActive={setActiveButton} />
           <TopButton label="Photography" isActive={activeButton === "Photography"} setActive={setActiveButton} />
           <TopButton label="Music" isActive={activeButton === "Music"} setActive={setActiveButton} />
         </div>
@@ -42,6 +43,7 @@ function App() {
       <div className="category">
         <Category title={"Trending in Art"} />
         <Category title={"Trending in Gaming"} />
+        <Category title={"Trending in PFPs"} />
         <Category title={"Trending in Photography"} />
         <Category title={"Trending in Music"} />
       </div>
