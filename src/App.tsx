@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavBar } from "./components/NavBar";
 import "./App.css";
 import { TopButton } from "./components/TopButton";
-import { Carousel, PrevArrow, NextArrow, CarouselRef } from "./components/Carousel"; // 导入 CarouselRef
+import { Carousel, PrevArrow, NextArrow, CarouselRef } from "./components/Carousel";
 import { Category } from "./components/Category";
 
 function App() {

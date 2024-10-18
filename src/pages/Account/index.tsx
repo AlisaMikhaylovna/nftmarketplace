@@ -39,7 +39,7 @@ const Account = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <Outlet />
+            <div className="outlet"><Outlet /></div>
         </div >
     );
 }
