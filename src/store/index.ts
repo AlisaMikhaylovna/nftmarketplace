@@ -6,5 +6,5 @@ const store = configureStore({
         nft: nftReducer
     }
 })
-
+export type Dispatch = typeof store.dispatch;
 export default store

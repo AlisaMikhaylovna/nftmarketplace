@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { Dispatch } from ".."
 
 const nftStore = createSlice({
     name: 'nft',
@@ -15,8 +16,8 @@ const nftStore = createSlice({
 
 const { setNFTList } = nftStore.actions
 const fetchNFTList = () => {
-    return async (dispatch: (arg0: { payload: any; type: "nft/setNFTList" }) => void) => {
-        const res = await axios.get('http://localhost:3004/data')
+    return async (dispatch: Dispatch) => {
+        const res = await axios.get("")
         dispatch(setNFTList(res.data))
     }
 }
